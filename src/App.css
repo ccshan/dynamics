@@ -1,38 +1,57 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App .controls {
+  position: relative;
+  flex-basis: content;
+  flex-grow: 0;
+  margin: 1em 0 1em 1em;
+  padding: 0;
+}
+
+.App .controls > div, .App .controls > table {
+  margin-bottom: 1ex;
+}
+
+.App .controls td, .App .controls th {
+  padding-right: 1em;
+}
+
+.App .controls button {
+  margin-right: 1ex;
+  margin-bottom: 1ex;
+}
+
+.App .controls input.payoff {
+  width: 3em;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input.invalid, input:invalid {
+  background: pink;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .plot {
+  position: relative;
+  flex-basis: 400px;
+  flex-grow: 1;
+  min-width: 400px;
+  min-height: 400px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
